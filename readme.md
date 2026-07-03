@@ -1,2 +1,2 @@
-\# Random C++
+# Random C++
 
