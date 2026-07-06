@@ -9,15 +9,32 @@ int main() {
 
     unsigned int minRandom {};
     unsigned int maxRandom {};
+    
+    while (true) {
 
-    std::cout << "Enter number minNumber: ";
-    std::cin >> minRandom;
-    std::cout << "Enter number maxNumber: ";
-    std::cin >> maxRandom;
+        std::cout << "Enter min number: ";
+        std::cin >> minRandom;
 
-    std::cout << "Random range from " << minRandom << " to " << "maxRandom " << maxRandom << " = "<< userRandom(minRandom, maxRandom);
+        std::cout << "Enter max number: ";
+        std::cin >> maxRandom;
 
+        if (minRandom > 0 && maxRandom > 0 && minRandom <= maxRandom) {
 
+            std::cout << "Random range from "
+                      << minRandom
+                      << " to "
+                      << maxRandom
+                      << " = "
+                      << userRandom(minRandom, maxRandom)
+                      << "\n";
+        }
+        else {
+            std::cout << "Error!! Invalid range\n";
+            return 1;
+        }
+    }
+
+    
     // pause
     std::cin.get();
     return 0;
